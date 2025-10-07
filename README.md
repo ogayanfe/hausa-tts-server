@@ -14,16 +14,6 @@ It powers the Gani AI assistant by converting Hausa text into high-quality spoke
 
 ---
 
-## 🧰 Requirements
-
-Make sure you have the following installed:
-
-- **Python 3.9+**
-- **pip** (Python package manager)
-- **virtualenv** (recommended)
-
----
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
@@ -57,6 +47,7 @@ In the project root, create a `.env` file and add the following:
 ```bash
 FLASK_ENV=development
 FLASK_APP=app.py
+SECRET_KEY="YOUR FLASK SECRET"
 ```
 
 (Optional) Add your Hugging Face token if needed:
