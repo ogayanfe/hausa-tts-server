@@ -1,6 +1,4 @@
 from flask import Blueprint, request, jsonify, send_file
-import tempfile
-import os
 from model import generate_audio
 
 main = Blueprint('main', __name__)
