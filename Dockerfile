@@ -26,4 +26,4 @@ COPY . .
 EXPOSE 8000
 
 # Command to run the app with Gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "app:create_app()"]
+CMD ["waitress-serve ", "--host"," 127.0.0.1", "--call", "app:create_app"]
