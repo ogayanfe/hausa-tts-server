@@ -1,0 +1,50 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+env/
+venv/
+.venv/
+
+# Ignore local config and credentials
+*.env
+.env.*
+config.json
+secret*.json
+
+# Ignore build and dist artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore test data and logs
+tests/
+*.log
+logs/
+*.tmp
+
+# Ignore Jupyter notebooks (optional)
+*.ipynb
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Git and editor metadata
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+
+# Ignore large model folders (if you load from Hugging Face or cloud instead)
+models/
+checkpoints/
+*.pth
+*.pt
+*.onnx
+*.bin

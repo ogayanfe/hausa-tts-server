@@ -15,7 +15,7 @@ MODEL_REPO = "CLEAR-Global/TWB-Voice-Hausa-TTS-1.0"
 def setup_model():
     # Folder containing all your downloaded Hausa TTS model files
     MODEL_DIR = os.path.join(os.path.dirname(__file__), "model_files")
-    config_path = hf_hub_download(MODEL_REPO, "config.json")
+    config_path = os.path.join(MODEL_DIR, "config.json")
 
     # Define paths to each required file
     config_path = os.path.join(MODEL_DIR, "config.json")
