@@ -1,10 +1,10 @@
 from TTS.api import TTS
-from huggingface_hub import hf_hub_download
 import json
 import scipy.io.wavfile as wavfile
 import numpy as np
 import os
 import tempfile
+
 
 # Download model files once at import
 MODEL_REPO = "CLEAR-Global/TWB-Voice-Hausa-TTS-1.0"
@@ -50,12 +50,16 @@ def setup_model():
 
 
 # Load once when server starts
-print("🔄 Loading Hausa TTS model... (may take a minute)")
-tts_instance = setup_model()
-print("✅ Hausa TTS model loaded successfully.")
+
+tts_instance = None
 
 
 def generate_audio(text: str, speaker: str = "spk_m_2",) -> str:
+    global tts_instance
+    if tts_instance is None:
+        print("🔄 Loading Hausa TTS model... (may take a minute)")
+        tts_instance = setup_model()
+        print("✅ Hausa TTS model loaded successfully.")
     """
     Generates Hausa speech for the given text and returns a path to the output file.
     """
