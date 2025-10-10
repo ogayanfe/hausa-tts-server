@@ -51,7 +51,9 @@ def setup_model():
 
 # Load once when server starts
 
-tts_instance = None
+print("🔄 Loading Hausa TTS model... (may take a minute)")
+tts_instance = setup_model()
+print("✅ Hausa TTS model loaded successfully.")
 
 
 def generate_audio(text: str, speaker: str = "spk_m_2",) -> str:
